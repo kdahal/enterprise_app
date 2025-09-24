@@ -21,6 +21,7 @@ dependencies = [
 dev = [
     "pytest==8.3.3",
     "pytest-asyncio==0.24.0",
+    "pytest-cov==5.0.0",
     "black==24.8.0",
     "flake8==7.1.1",
     "isort==5.13.2",
@@ -41,6 +42,11 @@ max-line-length = 88
 extend-ignore = "E203"
 
 [tool.pytest.ini_options]
-addopts = "--cov=enterprise_app --cov-report=xml"
+addopts = "--cov=enterprise_app --cov-report=xml --cov-report=term"
 testpaths = ["tests"]
 python_files = ["test_*.py"]
+asyncio_default_fixture_loop_scope = "function"  # Fix pytest-asyncio warning
+
+[tool.coverage.run]
+source = ["enterprise_app"]
+omit = ["*/__init__.py"]  # Exclude __init__.py files from coverage

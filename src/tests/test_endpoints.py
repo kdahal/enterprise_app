@@ -1,4 +1,3 @@
-# API endpoints (e.g., FastAPI routes)
 # tests/unit/test_endpoints.py
 from enterprise_app.api.v1.endpoints import health_check  # Adjust import based on your actual endpoints
 
