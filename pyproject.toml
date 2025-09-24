@@ -1,5 +1,3 @@
-# Project metadata and tool configurationi
-# Configures project metadata and tools like Black, Flake8, and isort.
 [project]
 name = "enterprise_app"
 version = "1.0.0"
@@ -41,3 +39,8 @@ line_length = 88
 [tool.flake8]
 max-line-length = 88
 extend-ignore = "E203"
+
+[tool.pytest.ini_options]
+addopts = "--cov=enterprise_app --cov-report=xml"
+testpaths = ["tests"]
+python_files = ["test_*.py"]
