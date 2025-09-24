@@ -13,3 +13,10 @@ class Config:
     API_PORT = int(os.getenv("API_PORT", 8000))
     DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///app.db")
     LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO")
+
+# tests/unit/test_config.py
+from enterprise_app.core.config import Config
+
+def test_config_values():
+    assert Config.API_HOST == "0.0.0.0"
+    assert Config.API_PORT == 8000
