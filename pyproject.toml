@@ -43,7 +43,7 @@ extend-ignore = "E203"
 
 [tool.pytest.ini_options]
 addopts = "--cov=enterprise_app --cov-report=xml --cov-report=term"
-testpaths = ["tests"]
+testpaths = ["tests", "tests/unit"]
 python_files = ["test_*.py"]
 asyncio_default_fixture_loop_scope = "function"
 
