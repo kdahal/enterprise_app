@@ -45,8 +45,8 @@ extend-ignore = "E203"
 addopts = "--cov=enterprise_app --cov-report=xml --cov-report=term"
 testpaths = ["tests"]
 python_files = ["test_*.py"]
-asyncio_default_fixture_loop_scope = "function"  # Fix pytest-asyncio warning
+asyncio_default_fixture_loop_scope = "function"
 
 [tool.coverage.run]
 source = ["enterprise_app"]
-omit = ["*/__init__.py"]  # Exclude __init__.py files from coverage
+omit = ["*/__init__.py"]
